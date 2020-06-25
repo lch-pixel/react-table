@@ -18,8 +18,8 @@ function Users() {
   
   return (
     <table>
-      {users.map(user => (
-        <tr>
+      {users.map((user, index) => (
+        <tr key={index}>
             <td>{user.username}</td>
             <td>{user.name}</td>
             <td>{user.email}</td>
