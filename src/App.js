@@ -1,10 +1,10 @@
 import React from 'react';
-import Users from './components/Users';
+import Dashboard from './components/Dashboard';
 
 function App() {
     return (
       <>
-       <Users />
+       <Dashboard />
       </>
     )
 }
