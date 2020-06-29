@@ -1,24 +1,23 @@
 import React from 'react';
 
-function Table(props) {
-  console.log(props.contents);
+function Table({titles, contents}) {
   return (
     <table>
       <thead>
         <tr>
-          {props.titles.map((title, index) => (
+          {titles.map((title, index) => (
             <td key={index}>{title}</td>
           ))}
         </tr>
       </thead>
       <tbody>
-{/*           {props.contents.map((user, index) => (
+   {contents.map((user, index) => (
           <tr key={index}>
-              {props.titles.map((title) => (
-                <td>{user[title]}</td>
+              {titles.map((title, index) => (
+                <td key={index}>{user[title]}</td>
               ))}
           </tr>
-        ))} */}
+        ))}
       </tbody>
     </table>
   );
