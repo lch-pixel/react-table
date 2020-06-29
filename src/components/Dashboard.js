@@ -7,6 +7,9 @@ function Dashboard() {
     const [users, setUsers] = useState([]);
     const [posts, setPosts] = useState([]);
 
+    const userTitles = getUserTitle();
+    const userPosts = getPostTitle();
+
     useEffect(() => {
         getUser().then((res) => setUsers(res));
         getPost().then((res) => setPosts(res));
@@ -14,8 +17,8 @@ function Dashboard() {
 
     return (
         <>
-            <Table titles={getUserTitle()}  contents={users} />
-            <Table titles={getPostTitle()}  contents={posts} />
+            <Table titles={userTitles}  contents={users} />
+            <Table titles={userPosts}  contents={posts} />
         </>
     )
 }

@@ -11,13 +11,17 @@ function Table({titles, contents}) {
         </tr>
       </thead>
       <tbody>
-   {contents.map((user, index) => (
-          <tr key={index}>
-              {titles.map((title, index) => (
-                <td key={index}>{user[title]}</td>
-              ))}
+      {contents.map((user) => {
+        return (
+          <tr key={user.id}>
+              {titles.map((title, index) => {
+                return(
+                  <td key={user.id+"_"+index}>{user[title]}</td>
+                );
+              })}
           </tr>
-        ))}
+        );
+        })}
       </tbody>
     </table>
   );
